@@ -1,0 +1,7 @@
+movie-service.url: http://localhost:8081/movies
+ratings-service.url: http://localhost:8082/ratings
+
+logging.level.org.springframework.security: DEBUG
+
+admin.username: Bharath1006
+admin.password: Kumar1006
