@@ -8,4 +8,4 @@ data:
 kind: ConfigMap
 metadata:
   creationTimestamp: null
-  name: tmr-gateway-service-config
+  name: tmr-gateway-service

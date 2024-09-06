@@ -11,6 +11,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: tmr-gateway-service-config
+                name: tmr-gateway-service
                 port:
                   number: 8080
