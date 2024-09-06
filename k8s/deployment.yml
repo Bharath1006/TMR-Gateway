@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: tmr-gateway-service
+  name: tmr-gateway-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tmr-gateway-service
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: tmr-gateway-service
+    spec:
+      containers:
+        - image: docker.io/bharath1006/tmr-gateway-service:0.0.1-SNAPSHOT
+          name: tmr-gateway-service
+          volumeMounts:
+            - mountPath: /app/config
+              name: tmr-gateway-service
+          env:
+            - name: SPRING_CONFIG_LOCATION
+              value: /app/config/
+      volumes:
+        - name: tmr-gateway-service
+          configMap:
+            name: tmr-gateway-service
+status: {}
